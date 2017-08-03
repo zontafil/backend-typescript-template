@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "HTTP API",
+            "type": "node",
+            "request": "launch",
+            "outDir": "${workspaceRoot}/release/js",
+            "program": "${workspaceRoot}/src/bin/httpApi.ts",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true
+        },
+        {
+            "name": "e2e tests",
+            "type": "node2",
+            "request": "launch",
+            "outDir": "${workspaceRoot}/release/js",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "stopOnEntry": false,
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "args": [
+                "release/js/api/**/*.test.js",
+                "--no-timeouts"
+            ],
+            "env": {
+                "NODE_ENV": "test"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to remote API",
+            "type": "node",
+            "request": "attach",
+            "port": 12999,
+            "address": "FILLME",
+            "sourceMaps": true,
+            "outFiles": [],
+            "localRoot": "${workspaceRoot}/release/js/api",
+            "remoteRoot": "/home/FILLME/release/js/api"
+        }
+    ]
+}

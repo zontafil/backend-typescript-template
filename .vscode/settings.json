@@ -1,0 +1,7 @@
+{
+    "typescript.check.workspaceVersion": false,
+    "files.exclude": {
+        "**/release": true,
+        "node_modules": true
+    }
+}

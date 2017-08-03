@@ -1,0 +1,14 @@
+node_modules/
+release/
+typings/
+npm-debug.log
+/config/default.json
+/config/test.json
+/config/config.json
+certificates/
+modelsauto/
+
+*.mwb.bak
+tmp/
+dbdump/
+\.directory
